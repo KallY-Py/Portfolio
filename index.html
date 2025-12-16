@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Porcopio - Junior Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0F0F0F",
+                        "text-main": "#EAEAEA",
+                        "text-secondary": "#A0A0A0",
+                        "surface-dark": "#181818"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0F0F0F;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #282828;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #137fec;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">JC</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="home"class="flex-grow flex flex-col relative">
+        <!-- Abstract Background Pattern -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]"></div>
+            <div class="absolute top-[40%] -left-[10%] w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[100px]"></div>
+        </div>
+        
+        <div class="relative mx-auto flex max-w-7xl flex-1 flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+                <!-- Text Content -->
+                <div class="flex flex-col justify-center text-left">
+                    <div class="mb-4 inline-flex items-center gap-2 self-start rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Available for hire
+                    </div>
+                    
+                    <h1 class="mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                        Hi, I'm <span class="text-primary">Porcopio</span>. <br/>
+                        Building digital experiences.
+                    </h1>
+                    
+                    <h2 class="mb-8 max-w-2xl text-lg text-text-secondary sm:text-xl leading-relaxed">
+                        A Junior Web Developer and Mobile IT Student passionate about Python, MYSQL, UI/UX, and clean code. I transform ideas into seamless, modern web applications.
+                    </h2>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects">
+                        <button class="flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(19,127,236,0.4)]">
+                            <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+                            View Projects
+                        </button>
+                        </a>
+
+                        
+                        <button class="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-transparent px-8 py-3 text-base font-bold text-white transition-all hover:border-white/40 hover:bg-white/5">
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                            Download Resume
+                        </button>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-6">
+                        <a aria-label="GitHub" class="text-text-secondary transition-colors hover:text-primary" href="#">
+                            <img class="w-6 h-6 invert opacity-60 hover:opacity-100 transition-opacity" data-alt="Github icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHl205WuCgedClO568Rf9CPeh9avRvrpUKPCUDAka8Ww0jyeYazoHeMr8dVzPbH3SdD1z7NlSWR-W_O86aR1UDbYBO29zcS4R2z3tHa8aYXbPBxnVLLbv-eyunzNWJ8n73YvgiA1zR4rfPW5mHCW1lVUSdryYRD1WCwVK0G-EpIfiGPtKgpbdj2XS7NW534CQWP26JFuOksu0ffr_T1lB-2LdRnrYeTW3OeARx4TQ5zlQIgYDDvZGGzx_4__PAKRGMgFBg2Kj-O2a" />
+                        </a>
+                        
+                        <a aria-label="LinkedIn" class="text-text-secondary transition-colors hover:text-primary" href="#">
+                            <img class="w-6 h-6 invert opacity-60 hover:opacity-100 transition-opacity" data-alt="LinkedIn icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcQ51mn1Njv_x3UpzZN0NuvKDF1I7qVXvWjMgw2vOrZTphbyhaCBM-VN87T1tDAqSPzVaShVkC62uGyGlKS1FdMmUO_QFWaoCXWX9HFbSR0LBfCCb1cnth91EyXK5mFcJZhfzs5S5CxpQ1Gix07y2JNHyaLPS-suADwsEWRYqnJ5Huo1ylSWGTJhR_TT3ONX9GnL9fNgI_V2khIFojT55Uk8nkO4DqLye87IpvvxEyEzWL083LhdDBKDcy7E8IM1FDIFZDpEJik5d7" />
+                        </a>
+                        
+                        <a aria-label="Twitter" class="text-text-secondary transition-colors hover:text-primary" href="#">
+                            <img class="w-6 h-6 invert opacity-60 hover:opacity-100 transition-opacity" data-alt="Twitter icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFh7p6aek3goPPXGSBA6QE7fwgH2xU0VcEyBVWEwnSjnl2CLeWqbikBSwRTCL_65CCYP0-9ybTvOPOynPXaH3D5vhgZU0zAQIOb64JdORnsfR2tVW2rqHSaVveoOCTugrNrfSmh52-3B9vqy9JzM6srXmE7gb6klIfbyrUOsoYXLC2StZwQqI_chCgTozR-fnfrjYdPxw_HCaHVYBmrcZQBXMII4lcn9piPAd_6EjA5otgbaqF1T_pqO6-DFG9X9ktiOCdf8HRkUQv" />
+                        </a>
+                        
+                        <div class="h-px w-12 bg-white/10"></div>
+                        <span class="text-sm text-text-secondary font-medium">Follow me</span>
+                    </div>
+                </div>
+                
+                <!-- Visual Content (Code Snippet or Profile Graphic) -->
+                <div class="relative hidden lg:block">
+                    <!-- Decor element behind -->
+                    <div class="absolute -right-4 -top-4 h-full w-full rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 blur-2xl"></div>
+                    
+                    <!-- Main Card -->
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#151515] shadow-2xl">
+                        <!-- Window Controls -->
+                        <div class="flex items-center gap-2 border-b border-white/5 bg-[#1a1a1a] px-4 py-3">
+                            <div class="h-3 w-3 rounded-full bg-red-500/80"></div>
+                            <div class="h-3 w-3 rounded-full bg-yellow-500/80"></div>
+                            <div class="h-3 w-3 rounded-full bg-green-500/80"></div>
+                            <div class="ml-4 rounded bg-white/5 px-2 py-0.5 text-xs text-text-secondary font-mono">Profile.tsx</div>
+                        </div>
+                        
+                        <!-- Content inside "IDE" -->
+                        <div class="p-6 font-mono text-sm leading-relaxed">
+                            <div class="flex gap-4">
+                                <div class="flex flex-col text-right text-text-secondary/30 select-none">
+                                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                                </div>
+                                
+                                <div class="text-gray-300">
+                                    <p><span class="text-purple-400">const</span> <span class="text-yellow-300">Developer</span> = {</p>
+                                    <p class="pl-4">name: <span class="text-green-400">'John Carl C Porcopio'</span>,</p>
+                                    <p class="pl-4">role: <span class="text-green-400">'Junior Web and Mobile Dev'</span>,</p>
+                                    <p class="pl-4">skills: [</p>
+                                    <p class="pl-8"><span class="text-green-400">'Python'</span>, <span class="text-green-400">'PHP'</span>, <span class="text-green-400">'MySQL'</span>, <span class="text-green-400">'UI/UX'</span></p>
+                                    <p class="pl-4">],</p>
+                                    <p class="pl-4">hardWorker: <span class="text-blue-400">true</span>,</p>
+                                    <p class="pl-4">openToWork: <span class="text-blue-400">true</span>,</p>
+                                    <p class="pl-4">hire: <span class="text-purple-400">function</span>() {</p>
+                                    <p class="pl-8"><span class="text-purple-400">return</span> <span class="text-green-400">"Let's build together!"</span>;</p>
+                                    <p class="pl-4">}</p>
+                                    <p>};</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 rounded-xl border border-white/10 bg-[#1e1e1e] p-4 shadow-xl backdrop-blur-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="rounded-full bg-green-500/20 p-2 text-green-500">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-secondary">Status</p>
+                                <p class="text-sm font-bold text-white">Seeking Opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate IT student nearing the end of my degree, with a strong
+                foundation in modern web technologies. I love building clean, user-friendly
+                interfaces and believe that good design is as important as good code.</p>
+                    
+                    <h3 class="subsection-title">Career Objective</h3>
+                    <p>Seeking a Junior Web Developer / IT Support role where I can apply my knowledge in Python, Flask, MySQL, 
+                and server management. I am eager to learn from experienced professionals, contribute to the team, and 
+                steadily grow my skills while helping deliver reliable and efficient technical solutions.</p>
+                    
+                    <h3 class="subsection-title">Tech Stack Overview</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Dart</span>
+                        <span class="tech-badge">PHP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Tailwind CSS</div>
+                        <div class="skill-item">Bootstrap</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">PHP</div>
+                        <div class="skill-item">MySQL</div>
+                        <div class="skill-item">Dart</div>
+                        <div class="skill-item">Firebase</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Mobile</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">Flutter</div>
+                        <div class="skill-item">Responsive Design</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">GitHub</div>
+                        <div class="skill-item">VS Code</div>
+                        <div class="skill-item">Figma</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/1.jpg" alt="E-Commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web & Mobile E-Commerce Platform</h3>
+                        <p class="project-description">A full-stack online shopping platform with user authentication, product management, and cart functionality.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">MySQ:</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/2.png" alt="Task Manager App">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LSEF TESDA</h3>
+                        <p class="project-description">A web-based student portal with blockchain-powered certificate verification for secure and tamper-proof credentials.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MySQl</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/g.png" alt="Weather App">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Simple Python Web Games</h3>
+                        <p class="project-description">A set of simple web-based games built with Python and Flask, featuring a Number Guessing Game, Tic-Tac-Toe, and a Memory Card Matching Game.
+                             The project focuses on learning game logic, user interaction, and connecting frontend and backend components.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bachelor of Science in Information Technology</h3>
+                        <p class="timeline-subtitle">Laguna State Polytechnic University – Santa Cruz (Main) Campus | 2022 - Present</p>
+                        <p class="timeline-description">Currently pursuing a degree in IT with focus on web & mobile development and database management. Maintaining a strong academic record while actively engaging in programming projects.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Seeking OJT Position</h3>
+                        <p class="timeline-subtitle">Junior Web Development / IT Support | 2025</p>
+                        <p class="timeline-description">Looking for On-the-Job Training opportunities in web development to apply academic knowledge in a professional setting, contribute to real-world projects, and learn industry best practices.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Certifications & Training</h3>
+                        <p class="timeline-subtitle">“Operating System Basics” Cisco Networking Academy | October 2025</p>
+                        <p class="timeline-subtitle">“Linux Essentials” Cisco Networking Academy | December 2025</p>
+                        <!-- <ul class="timeline-list">
+                            <li>Responsive Web Design Certification - freeCodeCamp</li>
+                            <li>JavaScript Algorithms and Data Structures - freeCodeCamp</li>
+                            <li>Introduction to Web Development - Coursera</li>
+                            <li>Git & GitHub for Beginners - Udemy</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">I'm currently seeking OJT opportunities and open to discussing how I can contribute to your team. Feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:johndoe@email.com" class="contact-method">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            jcporcopio03@gmail.com
+                        </a>
+                        
+                        <a href="https://github.com" class="contact-method" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            https://github.com/KallY-Py
+                        </a>
+                        
+                        <a href="https://linkedin.com" class="contact-method" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            https://www.linkedin.com/in/porcopio-john-carl-73b93737b/
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 John Doe. Built with HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
